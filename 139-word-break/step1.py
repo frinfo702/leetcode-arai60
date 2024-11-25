@@ -5,10 +5,10 @@ class Solution:
         words = set(wordDict)
         max_word_length = max(len(word) for word in words)
 
-        for i in range(1, len(s) + 1):
-            for j in range(max(0, i - max_word_length) , i):
-                if dp[j] and s[j:i] in wordDict:
-                    dp[i] = True
+        for end_index in range(1, len(s) + 1):
+            for start_index in range(max(0, end_index - max_word_length) , end_index):
+                if dp[start_index] and s[start_index:end_index] in wordDict:
+                    dp[end_index] = True
                     break
 
         return dp[-1]

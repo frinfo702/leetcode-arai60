@@ -6,12 +6,14 @@ class Solution:
         words = set(wordDict)        
         max_word_length = max(len(word) for word in words)
 
-        for end_i in range(1, len(s) + 1):
-            for start_i in range(max(0, end_i - max_word_length),end_i):
-                substring = s[start_i:end_i]
+        for end_index in range(1, len(s) + 1):
+            for start_index in range(max(0, end_index - max_word_length),end_index):
+                if not can_break[start_index]:
+                    continue
+                substring = s[start_index:end_index]
                 # 新たな部分文字列が見つかり、その直前の仕切りで分割可能
-                if can_break[start_i] and substring in wordDict:
-                    can_break[end_i] = True
+                if substring in wordDict:
+                    can_break[end_index] = True
                     break
 
         return can_break[-1]
