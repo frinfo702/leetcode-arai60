@@ -2,7 +2,7 @@ class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         num_partition = len(s) + 1 # sの各文字間の仕切りの数
         can_break = [False] * num_partition # 仕切りの最後で分割可能(True)なら最終的に分割可能
-        can_break[0] = True # len(s)が0なら必ず分割可能
+        can_break[0] = True # 仕切りの先頭は任意の文字列で分割可能
         
         for end_i in range(1, len(s) + 1):
             for start_i in range(end_i):
