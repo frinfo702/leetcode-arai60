@@ -9,4 +9,4 @@ class Solution:
                     dp[i] = True
                     break
 
-        return dp[len(s)]
+        return dp[-1]

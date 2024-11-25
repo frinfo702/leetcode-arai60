@@ -12,4 +12,4 @@ class Solution:
                     can_break[end_i] = True
                     break
 
-        return can_break[len(s)]
+        return can_break[-1]
