@@ -20,13 +20,15 @@ class Solution:
                 break
 
         # サイクルの有無で分岐
-        if has_cycle:
-            intersect = fast
-            restart = head
-            while intersect != restart:
-                intersect = intersect.next
-                restart = restart.next
-        else:
+
+        if not has_cycle:
             return None
+
+        intersect = fast
+        restart = head
+
+        while intersect != restart:
+            intersect = intersect.next
+            restart = restart.next
 
         return intersect

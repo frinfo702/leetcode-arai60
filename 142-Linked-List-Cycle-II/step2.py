@@ -21,14 +21,13 @@ class Solution:
                 break
 
         # サイクルを持たない場合
-        if has_cycle != True:
+        if not has_cycle:
             return None
-        else:
-            # 両方の速度を1 [node/回]に変更、一方はheadへ戻す
-            intersect = fast
-            restart = head
-            while intersect != restart:
-                intersect = intersect.next
-                restart = restart.next
+        # 両方の速度を1 [node/回]に変更、一方はheadへ戻す
+        intersect = fast
+        restart = head
+        while intersect != restart:
+            intersect = intersect.next
+            restart = restart.next
 
         return intersect
