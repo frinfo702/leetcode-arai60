@@ -19,16 +19,15 @@ class Solution:
             if fast == slow:
                 has_cycle = True
                 break
-
-        # サイクルを持たない場合
-        if has_cycle != True:
+        else:
             return None
 
         # 両方の速度を1 [node/回]に変更、一方はheadへ戻す
-        intersect = fast
-        restart = head
-        while intersect != restart:
-            intersect = intersect.next
-            restart = restart.next
+        if has_cycle:
+            intersect = fast
+            restart = head
+            while intersect != restart:
+                intersect = intersect.next
+                restart = restart.next
 
         return intersect
