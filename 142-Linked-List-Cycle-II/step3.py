@@ -4,11 +4,12 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution:
     def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
         # サイクルを持つか判定
         has_cycle = False
-        
+
         fast = head
         slow = head
         while fast and fast.next:
@@ -27,5 +28,5 @@ class Solution:
                 restart = restart.next
         else:
             return None
-        
+
         return intersect
