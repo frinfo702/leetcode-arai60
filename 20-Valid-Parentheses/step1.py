@@ -13,9 +13,7 @@ class Solution:
                     return False
                 if open_brackets.index(bracket_stack[-1]) != close_brackets.index(char):
                     return False
-                else:
-                    bracket_stack.pop()
-                    continue
+                bracket_stack.pop()
 
         if len(bracket_stack) == 0:
             return True

@@ -12,7 +12,6 @@ class Solution:
                     return False
                 if brackets_pair[brackets_stack[-1]] != char:
                     return False
-                else:
-                    brackets_stack.pop()
+                brackets_stack.pop()
 
         return not brackets_stack
