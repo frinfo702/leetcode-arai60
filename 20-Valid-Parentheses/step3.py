@@ -6,6 +6,7 @@ class Solution:
         for char in s:
             if char in brackets_pair:
                 brackets_stack.append(char)
+                continue
             else:
                 if not brackets_stack:
                     return False
