@@ -7,5 +7,6 @@
 - また、ペアを辞書にして管理する方法も思いついたので、別途実装してみる
 
 ## step2
-- `branket_stack`を`open_branket_stack`に変更
-- 
+- ループ末尾の`continue`は不要だったので削除
+- 括弧のリストだった部分を辞書に変更
+- 最後の条件分岐でreturn していたところをreturn notにした
