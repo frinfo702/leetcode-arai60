@@ -7,4 +7,5 @@
 - また、ペアを辞書にして管理する方法も思いついたので、別途実装してみる
 
 ## step2
+- `branket_stack`を`open_branket_stack`に変更
 - 
