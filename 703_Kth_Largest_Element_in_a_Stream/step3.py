@@ -22,8 +22,7 @@ class KthLargest(object):
         if len(self.heap) < self.Kth:
             heapq.heappush(self.heap, val)
         else:
-            if val > self.heap[0]:
-                heapq.heappushpop(self.heap, val)
+            heapq.heappushpop(self.heap, val)
         return self.heap[0]
 
 
