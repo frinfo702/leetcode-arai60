@@ -118,7 +118,7 @@ class KthLargest(object):
 ```
 - これまではそもそも新たな最小値になり得ない数もpush & popしていたがそもそもpushをしないようにした
   
-- quicksetectというのを使った解法もあるらしい
+- quickselectというのを使った解法もあるらしい
 - (後でみます...)
 
 # step3
