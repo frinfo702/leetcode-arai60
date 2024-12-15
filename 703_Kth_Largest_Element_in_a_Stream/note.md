@@ -1,5 +1,5 @@
 # step1
-- まず思いつくのは、与えられた文字列をいちいちソートして、前からk番目の要素を返すやり方
+- まず思いつくのは、与えられた配列をいちいちソートして、前からk番目の要素を返すやり方
 ```python
 class KthLargest(object):
 
@@ -9,7 +9,7 @@ class KthLargest(object):
         :type nums: List[int]
         """
         self.k = k
-        self.nums = nums
+        self.nums = nums.copy()
 
     def add(self, val):
         """
@@ -25,6 +25,9 @@ class KthLargest(object):
 # obj = KthLargest(k, nums)
 # param_1 = obj.add(val)
 ```
+> [!NOTE]
+> pythonはリストなどミュータブルなオブジェクトは参照渡しされるので`self.nums = nums`みたいな
+> 書き方だと引数を書き換えるので受けてからすると意図しない動作に感じさせる
 - これでも一応通る
 - time complexity: O(nlogn) (n: numsの要素数)
 - space complexity: O(n) (n: numsの要素数)
