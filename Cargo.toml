@@ -1,6 +1,6 @@
 [package]
-name = "software-engineering-association"
+name = "leetcode-arai60"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 
 [dependencies]
